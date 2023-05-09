@@ -1,0 +1,186 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    background-color: black;
+    color: #fff;
+  }
+
+  .heading{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1rem;
+    background-color: black;
+  }
+
+  #linkedListOption{
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    background-color: black;
+  }
+
+  button{
+    color: #000;
+    padding: 25px 50px;
+    font-weight: 600;
+    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 17px;
+    transition: 0.5s all ease-in;
+  }
+
+  button:hover{
+    background-color: black;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+  textarea{
+    color: #000;
+    font-weight: 600;
+    border: none;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 0.5s all ease-in;
+    align-items: center;
+    align-content: center;
+  }
+
+  .inputContainer {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgb(94, 94, 94);
+    gap: 10%;
+    padding: 1rem 10rem;
+    position: sticky;
+  }
+  
+  .displayContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 30px;
+    margin-top: 20px;
+    padding: 20px;
+    counter-reset: nodePosition;
+  }
+  .displayContainer > div {
+    height: 60px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bolder;
+    color: transparent;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    animation: displayNode 2s linear forwards;
+    animation-delay: calc(var(--order) * 100ms);
+  }
+  
+  @keyframes displayNode {
+    from {
+      background-color: yellow;
+    }
+    to {
+      color: black;
+      background-color: green;
+    }
+  }
+  .displayContainer > div::after {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    counter-increment: nodePosition;
+    content: counter(nodePosition);
+  }
+  .displayContainer > div:hover {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+  }
+  .displayContainer > span {
+    width: 45px;
+    height: 0px;
+    line-height: 100px;
+    position: relative;
+    animation: displayLink 2s linear forwards;
+    animation-delay: calc(var(--order) * 100ms);
+  }
+
+  @keyframes displayLink {
+    from {
+      border: 1px solid red;
+    }
+    to {
+      border: 1px solid white;
+    }
+  }
+  
+  .displayContainer div:first-child {
+    background-color: rgb(255, 81, 0);
+    color: black;
+    animation: headandlast 3s linear 1s infinite;
+  }
+  
+  @keyframes headandlast {
+    0% {
+      font-size: 30px;
+    }
+    50% {
+      font-size: 35px;
+      background-color: rgb(255, 255, 255);
+    }
+    100% {
+      font-size: 30px;
+    }
+  }
+  
+  select,
+  button {
+    height: fit-content;
+    padding: 5px 14px;
+  }
+  
+  textarea {
+    width: 600px;
+    text-align: center;
+  }
+  
+  @media all and (min-width: 200px) and (max-width: 700px) {
+    .inputContainer {
+      display: grid;
+      background-color: rgb(48, 135, 206);
+    }
+    textarea {
+      height: 30px;
+    }
+  }
+  #inputVal {
+    display: none;
+  }
+  
+  .highlight {
+    transform: scale(1.1);
+    background-color: red;
+  }
+
+  ::-webkit-input-placeholder {
+    text-align: center;
+}
+:-moz-placeholder {
+    text-align: center;
+}
+::-moz-placeholder {
+    text-align: center;
+}
+:-ms-input-placeholder {
+    text-align: center;
+}

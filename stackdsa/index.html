@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack Visualizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;800;900&display=swap"
+      rel="stylesheet"
+    />
+	<link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section class="main">
+      <div class="content">
+        <span class="product">Stack Visualizer</span>
+      </div>
+      <div class="stack"></div>
+      <div class="functions">
+		<input type="number" id="stack_size" name="stack_size" placeholder="Stack Size (default: 10)">
+		<button onclick="changesize()" id="size">Create</button>
+        <button id="push">Push</button>
+        <button id="pop">Pop</button>
+        <button id="top">Top</button>
+        <button id="reset">Reset</button>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
